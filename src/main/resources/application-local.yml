@@ -1,0 +1,29 @@
+spring:
+  profiles: local
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: "jdbc:mariadb://newkayak.myqnapcloud.com:3602/chat"
+    username: "root"
+    password: "q1w2e3R4T%"
+    hikari:
+      maximum-pool-size: 5
+      connection-timeout: 5000
+      connection-init-sql: SELECT 1247 FROM DUAL
+      minimum-idle: 2
+      idle-timeout: 600000
+      max-lifetime: 1800000
+  jpa:
+    hibernate:
+      ddl-auto: update
+  logging: ##LOGGING
+    level:
+      root: info
+      sql: debug
+      swagger: info
+    charset:
+      console: UTF-8
+      file: UTF-8
+    file:
+      name: ./logs/out.log
+
+CONSTANTS:
