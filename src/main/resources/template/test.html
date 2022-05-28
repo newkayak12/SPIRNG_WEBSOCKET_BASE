@@ -17,28 +17,30 @@
       <button onclick="cnt()">connect</button>
       <button onclick="btn()">send</button>
   </div>
+  <div id="box"></div>
 </body>
 <script>
+    const box = document.getElementById("box")
+    const dv = document.createElement("div")
     const sock = new SockJS('http://localhost:9090/chat')
     const stomp = Stomp.over(sock);
-        const cnl = document.getElementById('select').value
+    const v = location.href.substring(location.href.toString().indexOf("?")+1).split("&")
+    const idx  = v.findIndex((item)=>{
+        return item.includes('type')
+    })
+    const type = v[idx].split('=')
+    document.getElementById('select').value = type[1]
+    const cnl =type[1]
     let msg = ''
-    console.log(msg)
-    function cnt(){
-        stomp.connect({}, function(){
-            stomp.subscribe(`/sub/chat/message/${cnl}`, function(chat){
-                msg = chat
-                console.log(chat)
-            })
-            stomp.send(`/pub/chat/message/${cnl}`, {}, JSON.stringify({roomId: cnl, writer: "username"}))
-        })
-    }
-    setInterval(()=>{
+
+    stomp.connect({}, function(){
         stomp.subscribe(`/sub/chat/message/${cnl}`, function(chat){
             msg = chat
-            console.log(chat)
+            dv.innerText= chat
+            box.append(dv)
         })
-    }, 500)
+        stomp.send(`/pub/chat/message/${cnl}`, {}, JSON.stringify({roomId: cnl, writer: "username"}))
+    })
     function btn(){
         const text = document.getElementById("text").value
         stomp.send('/pub/chat/message/1', {}, JSON.stringify({roomId: "1", writer: "username", text:text}))
