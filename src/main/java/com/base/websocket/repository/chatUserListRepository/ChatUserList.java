@@ -1,6 +1,7 @@
-package com.base.websocket.repository.ChatRepository;
+package com.base.websocket.repository.chatUserListRepository;
 
-import com.base.websocket.repository.UserRepository.User;
+import com.base.websocket.repository.chatRoomRepository.ChatRoom;
+import com.base.websocket.repository.userRepository.User;
 
 import javax.persistence.*;
 

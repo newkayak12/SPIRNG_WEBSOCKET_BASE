@@ -1,8 +1,8 @@
-package com.base.websocket.repository.MessageRepository;
+package com.base.websocket.repository.messageRepository;
 
 import com.base.websocket.common.baseEntity.DefaultDateEntity;
-import com.base.websocket.repository.ChatRepository.ChatRoom;
-import com.base.websocket.repository.UserRepository.User;
+import com.base.websocket.repository.chatRoomRepository.ChatRoom;
+import com.base.websocket.repository.userRepository.User;
 import lombok.*;
 
 import javax.persistence.*;

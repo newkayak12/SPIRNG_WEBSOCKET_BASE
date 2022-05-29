@@ -1,4 +1,4 @@
-package com.base.websocket.repository.UserRepository;
+package com.base.websocket.repository.userRepository;
 
 import com.base.websocket.common.baseEntity.AuthEntity;
 import com.base.websocket.common.baseEntity.UserDateEntity;
