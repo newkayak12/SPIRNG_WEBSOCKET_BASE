@@ -13,7 +13,6 @@ import javax.persistence.*;
     @Getter
     @NoArgsConstructor
     @AllArgsConstructor
-    @Builder
     @EqualsAndHashCode
     @ToString
     public class User extends UserDateEntity {

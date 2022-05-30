@@ -16,11 +16,18 @@ public class ChatUserListRepositoryImpl extends QuerydslRepositorySupport implem
 
     @Override
     public Page<ChatUserList> getChatRoomListByUserNo(Long userNo, Pageable pageable) {
-        BooleanBuilder booleanBuilder = new BooleanBuilder();
-
         QueryResults<ChatUserList> results  = from(chatUserList)
                 .where(chatUserList.user.userNo.eq(userNo))
                 .fetchResults();
         return new PageImpl<ChatUserList>(results.getResults(), pageable, results.getTotal());
+    }
+
+    @Override
+    public ChatUserList getChatRoomByUserNoAndUuid(Long userNo, String uuid) {
+        return from(chatUserList)
+                .where(chatUserList.chatRoom.uuid.eq(uuid)
+                        .and(chatUserList.user.userNo.eq(userNo)))
+                .fetchOne();
+
     }
 }

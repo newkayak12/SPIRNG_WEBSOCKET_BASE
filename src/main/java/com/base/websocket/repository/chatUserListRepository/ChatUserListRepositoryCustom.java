@@ -7,4 +7,5 @@ import org.springframework.data.domain.Pageable;
 
 public interface ChatUserListRepositoryCustom {
     Page<ChatUserList> getChatRoomListByUserNo(Long userNo, Pageable pageable);
+    ChatUserList getChatRoomByUserNoAndUuid(Long userNo, String uuid);
 }
