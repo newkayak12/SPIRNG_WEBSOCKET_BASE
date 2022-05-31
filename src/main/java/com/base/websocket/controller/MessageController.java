@@ -1,9 +1,11 @@
 package com.base.websocket.controller;
 
 import com.base.websocket.common.constants.Constants;
+import com.base.websocket.repository.dto.ChatRoomDto;
 import com.base.websocket.repository.dto.MessageDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.messaging.Message;
 import org.springframework.messaging.converter.SimpleMessageConverter;
 import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
@@ -14,6 +16,10 @@ import org.springframework.messaging.simp.annotation.SubscribeMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.lang.reflect.Method;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 
 @RestController
@@ -21,6 +27,8 @@ import java.lang.reflect.Method;
 @Slf4j
 public class MessageController {
     private final SimpMessageSendingOperations simpMessageSendingOperations;
+    Map<String, List<MessageDto>> memory = new ConcurrentHashMap<>();
+
     @MessageMapping("/connected/{uuid}")
     public void connected(@DestinationVariable String uuid, @Payload MessageDto message){
 
