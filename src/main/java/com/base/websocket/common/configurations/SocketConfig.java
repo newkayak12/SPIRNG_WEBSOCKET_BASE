@@ -1,7 +1,11 @@
 package com.base.websocket.common.configurations;
 
 import com.base.websocket.common.constants.Constants;
+import com.base.websocket.common.interceptor.SocketInterceptor;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.messaging.simp.config.ChannelRegistration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;
 import org.springframework.scheduling.TaskScheduler;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
@@ -11,7 +15,11 @@ import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerCo
 
 @Configuration
 @EnableWebSocketMessageBroker
+@RequiredArgsConstructor
 public class SocketConfig implements WebSocketMessageBrokerConfigurer {
+
+    private final SocketInterceptor socketInterceptor;
+
     //   실제 메시지 브로커
     @Override
     public void configureMessageBroker(MessageBrokerRegistry registry) {
@@ -27,6 +35,11 @@ public class SocketConfig implements WebSocketMessageBrokerConfigurer {
         registry.addEndpoint(Constants.ENDPOINT)
                 .setAllowedOriginPatterns(Constants.ALLOW_ORIGIN)
                 .withSockJS();
+    }
+
+    @Override
+    public void configureClientInboundChannel(ChannelRegistration registration) {
+        registration.interceptors(socketInterceptor);
     }
 }
 

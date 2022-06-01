@@ -1,5 +1,6 @@
 package com.base.websocket.repository.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -17,9 +18,11 @@ public class MessageDto implements Serializable {
     private  ChatRoomDto chatRoom;
     private  UserDto user;
     private  String message;
+    @JsonIgnore
     private  Boolean isDeleted;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private  LocalDateTime regDate;
+    @JsonIgnore
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private  LocalDateTime modifiedDate;
 }

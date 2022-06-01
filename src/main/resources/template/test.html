@@ -16,12 +16,17 @@
     <input type="text" id="text">
       <button onclick="cnt()">connect</button>
       <button onclick="btn()">send</button>
+      <button onclick="disconnect()">disconnect</button>
   </div>
-  <div id="box"></div>
+  <div id="box" class="boxes"></div>
 </body>
+<style>
+    .boxes div {
+        margin-top: 5rem;
+    }
+</style>
 <script>
     const box = document.getElementById("box")
-    const dv = document.createElement("div")
     const sock = new SockJS('http://localhost:9090/chat')
     const stomp = Stomp.over(sock);
     const v = location.href.substring(location.href.toString().indexOf("?")+1).split("&")
@@ -31,22 +36,32 @@
     const type = v[idx].split('=')
     document.getElementById('select').value = type[1]
     const cnl =type[1]
-    let msg = ''
+
+
+
+    let container = {messageNo:1,chatRoom:{chatRoomNo: 1, uuid:cnl},user:{userNo:Math.random()*10},message:null}
+
 
     stomp.connect({}, function(){
         stomp.subscribe(`/sub/message/${cnl}`, function(chat){
             msg = chat
-            dv.innerText= chat
+            let dv = document.createElement("div").innerText= chat
             box.append(dv)
         })
-        stomp.send(`/pub/chat/message/${cnl}`, {}, JSON.stringify({uuid: cnl, writer: "username"}))
+
+
+        // container.message = 'connect'
+        // console.log("connect", container)
+        // stomp.send(`/pub/connected/${cnl}`, {}, JSON.stringify(container))
     })
     function btn(){
         const text = document.getElementById("text").value
-        stomp.send('/pub/chat/message/1', {}, JSON.stringify({uuid: "1", writer: "username", text:text}))
+        container.message = text
+        stomp.send('/pub/message/1', {}, JSON.stringify(container))
     }
 
     function disconnect(){
+        stomp.unsubscribe(`/sub/message/${cnl}`)
         stomp.disconnect()
     }
 </script>

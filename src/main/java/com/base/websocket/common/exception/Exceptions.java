@@ -9,6 +9,10 @@ public enum Exceptions {
     TOKEN_EXPIRED(-998, "접근 권한이 만료되었습니다."),
     INVALID_ACCESS(-998, "잘못된 접근입니다."),
 
+// SOCKET_EXCPETIONS
+    CRITICAL_ERROR(-5000, "치명적인 오류가 발생했습니다."),
+
+
 //    USER_EXCEPTIONS
     NO_DATA(-1, "데이터가 존재하지 않습니다.");
 
