@@ -16,9 +16,8 @@ import java.util.List;
 @RequiredArgsConstructor
 public class MessageService {
     private final MessageRepository messageRepository;
-    public Integer saveMessages(String uuid, List<MessageDto> messageDtoList){
-        List<Message> list =  new ArrayList<>();
-        list = Mapper.modelMapping(messageDtoList, list);
-        return messageRepository.saveAll(list).size();
+    public void saveMessage(MessageDto messageDto){
+        Message msg = Mapper.modelMapping(messageDto, new Message());
+        messageRepository.save(msg);
     }
 }

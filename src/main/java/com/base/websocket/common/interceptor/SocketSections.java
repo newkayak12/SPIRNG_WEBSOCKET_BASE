@@ -15,30 +15,14 @@ import java.util.concurrent.ConcurrentHashMap;
 @Component
 @RequiredArgsConstructor
 public class SocketSections {
-    private Map<String, List<MessageDto>> memory = new ConcurrentHashMap<>();
     private final MessageService messageService;
-
-    public void subscribe(String uuid){
-        if(Objects.isNull(memory.get(uuid))){
-            List<MessageDto> list = new ArrayList<>();
-            memory.put(uuid, list);
-        }
-    }
-    public void unSubscribe(String uuid) throws ServiceException {
-        List result = memory.get(uuid);
-        if(Objects.isNull(result)){
-                    throw new ServiceException(Exceptions.CRITICAL_ERROR);
-        }
-        if(messageService.saveMessages(uuid, result)>0){
-            memory.remove(uuid);
-        }
-    }
-
-    public void setMessage(String uuid, MessageDto msg ) throws ServiceException {
-        List result = memory.get(uuid);
-        if(Objects.isNull(result)){
+    public void setMessage( MessageDto msg ) throws ServiceException {
+        if(Objects.isNull(msg.getUser())){
             throw new ServiceException(Exceptions.CRITICAL_ERROR);
         }
-        result.add(msg);
+        if(Objects.isNull(msg.getChatRoom())){
+            throw new ServiceException(Exceptions.CRITICAL_ERROR);
+        }
+        messageService.saveMessage(msg);
     }
 }

@@ -18,10 +18,10 @@ public class ChatUserList {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long chatUserListNo;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "chatroom_no")
     private ChatRoom chatRoom;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_no", referencedColumnName = "user_no")
     private User user;
     @Column(name = "last_idx")
