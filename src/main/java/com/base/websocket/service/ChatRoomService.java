@@ -53,4 +53,6 @@ public class ChatRoomService {
     public void deleteChatRoom(Long roomNo) throws ServiceException{
         chatRoomRepository.delete(chatRoomRepository.getChatRoomByChatRoomNo(roomNo).orElseThrow(()-> new ServiceException(Exceptions.NO_DATA)));
     }
+
+
 }

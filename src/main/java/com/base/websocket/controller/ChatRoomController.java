@@ -7,6 +7,7 @@ import com.base.websocket.repository.dto.ChatRoomDto;
 import com.base.websocket.repository.dto.ChatRoomInsertDto;
 import com.base.websocket.repository.dto.UserDto;
 import com.base.websocket.service.ChatRoomService;
+import com.base.websocket.service.MessageService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.messaging.handler.annotation.Payload;
@@ -21,9 +22,10 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ChatRoomController {
     private final ChatRoomService chatRoomService;
+    private final MessageService messageService;
 
     /**
-     *
+     * 채팅방 리스트
      * @param userNo
      * @param paging
      * @return
@@ -34,7 +36,7 @@ public class ChatRoomController {
     }
 
     /**
-     *
+     * 채팅방 리스트 중 선택
      * @param userNo
      * @param uuid
      * @return
@@ -44,14 +46,30 @@ public class ChatRoomController {
         return new Response(200, "", chatRoomService.getChatRoom(userNo, uuid));
     }
 
+    /**
+     * 채팅방 등록/수정
+     * @param chatRoomInsertDto
+     * @return
+     */
     @PostMapping("/chatroom/")
     public Response chatRoom(@RequestBody ChatRoomInsertDto chatRoomInsertDto){
         return new Response(200, "", chatRoomService.saveChatRoom(chatRoomInsertDto));
     }
 
+    /**
+     * 채팅방 삭제
+     * @param roomNo
+     * @return
+     * @throws ServiceException
+     */
     @DeleteMapping("/chatroom/{roomNo}")
     public Response chatRoom(@PathVariable Long roomNo) throws ServiceException {
         chatRoomService.deleteChatRoom(roomNo);
         return new Response(200, "", null);
+    }
+
+    @GetMapping("/chatroom/{uuid}/message")
+    public Response chatRoomMessages(@PathVariable String uuid,  @ModelAttribute PagingDto paging){
+        messageService.chatRoomMessages(uuid, paging);
     }
 }
