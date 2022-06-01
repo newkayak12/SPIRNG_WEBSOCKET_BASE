@@ -25,4 +25,6 @@ spring:
 
 CONSTANTS:
   PROJECTNAME: "SPRING_BASE_WEBSOCKET"
-
+  SUBSCRIBE: "/sub"
+  PUBLISH: "/pub"
+  ENDPOINT: "/chat"

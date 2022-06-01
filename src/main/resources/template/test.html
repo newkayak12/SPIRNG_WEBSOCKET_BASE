@@ -34,16 +34,20 @@
     let msg = ''
 
     stomp.connect({}, function(){
-        stomp.subscribe(`/sub/chat/message/${cnl}`, function(chat){
+        stomp.subscribe(`/sub/message/${cnl}`, function(chat){
             msg = chat
             dv.innerText= chat
             box.append(dv)
         })
-        stomp.send(`/pub/chat/message/${cnl}`, {}, JSON.stringify({roomId: cnl, writer: "username"}))
+        stomp.send(`/pub/chat/message/${cnl}`, {}, JSON.stringify({uuid: cnl, writer: "username"}))
     })
     function btn(){
         const text = document.getElementById("text").value
-        stomp.send('/pub/chat/message/1', {}, JSON.stringify({roomId: "1", writer: "username", text:text}))
+        stomp.send('/pub/chat/message/1', {}, JSON.stringify({uuid: "1", writer: "username", text:text}))
+    }
+
+    function disconnect(){
+        stomp.disconnect()
     }
 </script>
 </html>
