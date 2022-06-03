@@ -68,8 +68,14 @@ public class ChatRoomController {
         return new Response(200, "", null);
     }
 
+    /**
+     * 메시지 가져오기
+     * @param uuid
+     * @param paging
+     * @return
+     */
     @GetMapping("/chatroom/{uuid}/message")
     public Response chatRoomMessages(@PathVariable String uuid,  @ModelAttribute PagingDto paging){
-        messageService.chatRoomMessages(uuid, paging);
+        return new Response(200, "", messageService.chatRoomMessages(uuid, paging));
     }
 }
