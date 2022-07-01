@@ -58,7 +58,7 @@ public class NotificationService {
         Map<String,SseEmitter> emitterMap = sseEmitterRepository.findAllEmitterStartWithByUserNo(targetUserNo);
         emitterMap.forEach((key,emitter)->{
             sseEmitterRepository.saveEventCache(key, data);
-
+            remindNotifications(emitter, eventId, key, data);
         });
     }
 
