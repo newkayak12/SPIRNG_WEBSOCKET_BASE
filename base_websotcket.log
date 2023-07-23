@@ -1,0 +1,254 @@
+2023-07-23 11:04:37.101  INFO 4976 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-07-23 11:04:37.102  INFO 4976 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=base_websocket, profiles=[local], label=null, version=null, state=null
+2023-07-23 11:04:37.102  WARN 4976 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location '[ConfigServerConfigDataResource@6f95cd51 uris = array<String>['http://newkayak.iptime.org:8888'], optional = false, profiles = list['local']]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: Config Server file:/home/config/base_websocket-local.yml:23:13]
+2023-07-23 11:04:37.327  INFO 4976 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-07-23 11:04:37.394  INFO 4976 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=base_websotcket, profiles=[default], label=null, version=null, state=null
+2023-07-23 11:04:37.394  INFO 4976 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}]
+2023-07-23 11:04:37.402  INFO 4976 --- [main] com.base.websocket.WebsocketApplication  : The following 1 profile is active: "local"
+2023-07-23 11:04:37.408  INFO 4976 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-07-23 11:04:37.409  INFO 4976 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=base_websotcket, profiles=[local], label=null, version=null, state=null
+2023-07-23 11:04:37.409  WARN 4976 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: Config Server file:/home/config/base_websocket-local.yml:23:13]
+2023-07-23 11:04:37.655  INFO 4976 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-23 11:04:37.662  INFO 4976 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2023-07-23 11:04:37.733  INFO 4976 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d8b8958e-1dd0-3f52-b022-489a8da050c2
+2023-07-23 11:04:37.928  INFO 4976 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 2000 (http)
+2023-07-23 11:04:37.933  INFO 4976 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-23 11:04:37.933  INFO 4976 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-07-23 11:04:38.000  INFO 4976 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-23 11:04:38.000  INFO 4976 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 591 ms
+2023-07-23 11:04:38.088  INFO 4976 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-23 11:04:38.109  INFO 4976 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-07-23 11:04:38.183  INFO 4976 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-07-23 11:04:38.227  INFO 4976 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-23 11:04:39.147  INFO 4976 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-23 11:04:39.165  INFO 4976 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2023-07-23 11:04:40.334  INFO 4976 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-23 11:04:40.350  INFO 4976 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-23 11:04:40.674  INFO 4976 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 2000 (http) with context path ''
+2023-07-23 11:04:40.678  INFO 4976 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2023-07-23 11:04:40.678  INFO 4976 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@185a7dd0]]
+2023-07-23 11:04:40.678  INFO 4976 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2023-07-23 11:04:40.685  INFO 4976 --- [main] com.base.websocket.WebsocketApplication  : Started WebsocketApplication in 4.269 seconds (JVM running for 4.677)
+2023-07-23 11:04:40.687  WARN 4976 --- [main] com.base.websocket.WakeUp                :  
+  ____                 __        __   _    ____                 _    _   
+ | __ )  __ _ ___  ___ \ \      / /__| |__/ ___|  ___   ___ ___| | _| |_ 
+ |  _ \ / _` / __|/ _ \ \ \ /\ / / _ \ '_ \___ \ / _ \ / __/ _ \ |/ / __|
+ | |_) | (_| \__ \  __/  \ V  V /  __/ |_) |__) | (_) | (_|  __/   <| |_ 
+ |____/ \__,_|___/\___|___\_/\_/ \___|_.__/____/ \___/ \___\___|_|\_\\__|
+                     |_____|                                              is ready
+2023-07-23 11:05:40.436  INFO 4976 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2023-07-23 11:07:29.998  INFO 4976 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2023-07-23 11:07:29.998  INFO 4976 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@185a7dd0]]
+2023-07-23 11:07:29.999  INFO 4976 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2023-07-23 11:07:30.017  INFO 4976 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-23 11:07:30.019  INFO 4976 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-23 11:07:30.031  INFO 4976 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-23 11:17:45.930  INFO 6522 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-07-23 11:17:45.932  INFO 6522 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=base_websocket, profiles=[local], label=null, version=null, state=null
+2023-07-23 11:17:45.932  WARN 6522 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location '[ConfigServerConfigDataResource@6f95cd51 uris = array<String>['http://newkayak.iptime.org:8888'], optional = false, profiles = list['local']]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: Config Server file:/home/config/base_websocket-local.yml:23:13]
+2023-07-23 11:17:46.230  INFO 6522 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-07-23 11:17:46.283  INFO 6522 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=base_websotcket, profiles=[default], label=null, version=null, state=null
+2023-07-23 11:17:46.284  INFO 6522 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}]
+2023-07-23 11:17:46.295  INFO 6522 --- [main] com.base.websocket.WebsocketApplication  : The following 1 profile is active: "local"
+2023-07-23 11:17:46.303  INFO 6522 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-07-23 11:17:46.303  INFO 6522 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=base_websotcket, profiles=[local], label=null, version=null, state=null
+2023-07-23 11:17:46.304  WARN 6522 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: Config Server file:/home/config/base_websocket-local.yml:23:13]
+2023-07-23 11:17:46.785  INFO 6522 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-23 11:17:46.794  INFO 6522 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2023-07-23 11:17:46.896  INFO 6522 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2d6b8ffd-c74a-3ce3-8ea3-ae903d03be82
+2023-07-23 11:17:47.200  INFO 6522 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 2000 (http)
+2023-07-23 11:17:47.206  INFO 6522 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-23 11:17:47.206  INFO 6522 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-07-23 11:17:47.283  INFO 6522 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-23 11:17:47.283  INFO 6522 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 979 ms
+2023-07-23 11:17:47.405  INFO 6522 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-23 11:17:47.437  INFO 6522 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-07-23 11:17:47.520  INFO 6522 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-07-23 11:17:47.561  INFO 6522 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-23 11:17:48.048  INFO 6522 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-23 11:17:48.057  INFO 6522 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2023-07-23 11:17:48.671  INFO 6522 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-23 11:17:48.679  INFO 6522 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-23 11:17:49.075  INFO 6522 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 2000 (http) with context path ''
+2023-07-23 11:17:49.078  INFO 6522 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2023-07-23 11:17:49.078  INFO 6522 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@73d8c8d7]]
+2023-07-23 11:17:49.079  INFO 6522 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2023-07-23 11:17:49.086  INFO 6522 --- [main] com.base.websocket.WebsocketApplication  : Started WebsocketApplication in 3.771 seconds (JVM running for 4.288)
+2023-07-23 11:17:49.087  WARN 6522 --- [main] com.base.websocket.WakeUp                :  
+  ____                 __        __   _    ____                 _    _   
+ | __ )  __ _ ___  ___ \ \      / /__| |__/ ___|  ___   ___ ___| | _| |_ 
+ |  _ \ / _` / __|/ _ \ \ \ /\ / / _ \ '_ \___ \ / _ \ / __/ _ \ |/ / __|
+ | |_) | (_| \__ \  __/  \ V  V /  __/ |_) |__) | (_) | (_|  __/   <| |_ 
+ |____/ \__,_|___/\___|___\_/\_/ \___|_.__/____/ \___/ \___\___|_|\_\\__|
+                     |_____|                                              is ready
+2023-07-23 11:18:25.419  INFO 6522 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2023-07-23 11:18:25.420  INFO 6522 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@73d8c8d7]]
+2023-07-23 11:18:25.421  INFO 6522 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2023-07-23 11:18:25.439  INFO 6522 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-23 11:18:25.442  INFO 6522 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-23 11:18:25.457  INFO 6522 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-23 11:18:28.049  INFO 6550 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-07-23 11:18:28.051  INFO 6550 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=base_websocket, profiles=[local], label=null, version=null, state=null
+2023-07-23 11:18:28.051  WARN 6550 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location '[ConfigServerConfigDataResource@6f95cd51 uris = array<String>['http://newkayak.iptime.org:8888'], optional = false, profiles = list['local']]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: Config Server file:/home/config/base_websocket-local.yml:23:13]
+2023-07-23 11:18:28.292  INFO 6550 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-07-23 11:18:28.347  INFO 6550 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=base_websotcket, profiles=[default], label=null, version=null, state=null
+2023-07-23 11:18:28.348  INFO 6550 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}]
+2023-07-23 11:18:28.364  INFO 6550 --- [main] com.base.websocket.WebsocketApplication  : The following 1 profile is active: "local"
+2023-07-23 11:18:28.374  INFO 6550 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-07-23 11:18:28.374  INFO 6550 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=base_websotcket, profiles=[local], label=null, version=null, state=null
+2023-07-23 11:18:28.374  WARN 6550 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: Config Server file:/home/config/base_websocket-local.yml:23:13]
+2023-07-23 11:18:28.398  WARN 6550 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.base.websocket.WebsocketApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'inboundInterceptor' for bean class [com.base.websocket.component.interceptor.InboundInterceptor] conflicts with existing, non-compatible bean definition of same name and class [com.base.websocket.component.configure.stomp.interceptor.InboundInterceptor]
+2023-07-23 11:18:28.417 ERROR 6550 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.base.websocket.WebsocketApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'inboundInterceptor' for bean class [com.base.websocket.component.interceptor.InboundInterceptor] conflicts with existing, non-compatible bean definition of same name and class [com.base.websocket.component.configure.stomp.interceptor.InboundInterceptor]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:188) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:748) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.11.jar:2.7.11]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.11.jar:2.7.11]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.11.jar:2.7.11]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.11.jar:2.7.11]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.11.jar:2.7.11]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.11.jar:2.7.11]
+	at com.base.websocket.WebsocketApplication.main(WebsocketApplication.java:10) ~[main/:na]
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'inboundInterceptor' for bean class [com.base.websocket.component.interceptor.InboundInterceptor] conflicts with existing, non-compatible bean definition of same name and class [com.base.websocket.component.configure.stomp.interceptor.InboundInterceptor]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:349) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:287) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:295) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:206) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:174) ~[spring-context-5.3.27.jar:5.3.27]
+	... 13 common frames omitted
+
+2023-07-23 11:19:07.336  INFO 6572 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-07-23 11:19:07.337  INFO 6572 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=base_websocket, profiles=[local], label=null, version=null, state=null
+2023-07-23 11:19:07.337  WARN 6572 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location '[ConfigServerConfigDataResource@6f95cd51 uris = array<String>['http://newkayak.iptime.org:8888'], optional = false, profiles = list['local']]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: Config Server file:/home/config/base_websocket-local.yml:23:13]
+2023-07-23 11:19:07.674  INFO 6572 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-07-23 11:19:07.747  INFO 6572 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=base_websotcket, profiles=[default], label=null, version=null, state=null
+2023-07-23 11:19:07.748  INFO 6572 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}]
+2023-07-23 11:19:07.766  INFO 6572 --- [main] com.base.websocket.WebsocketApplication  : The following 1 profile is active: "local"
+2023-07-23 11:19:07.777  INFO 6572 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-07-23 11:19:07.778  INFO 6572 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=base_websotcket, profiles=[local], label=null, version=null, state=null
+2023-07-23 11:19:07.778  WARN 6572 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: Config Server file:/home/config/base_websocket-local.yml:23:13]
+2023-07-23 11:19:08.148  INFO 6572 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-23 11:19:08.163  INFO 6572 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2023-07-23 11:19:08.270  INFO 6572 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=343b947e-99ac-3741-84e2-997cf0f04bb2
+2023-07-23 11:19:08.482  INFO 6572 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 2000 (http)
+2023-07-23 11:19:08.487  INFO 6572 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-23 11:19:08.487  INFO 6572 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-07-23 11:19:08.555  INFO 6572 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-23 11:19:08.555  INFO 6572 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 776 ms
+2023-07-23 11:19:08.638  INFO 6572 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-23 11:19:08.658  INFO 6572 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-07-23 11:19:08.730  INFO 6572 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-07-23 11:19:08.773  INFO 6572 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-23 11:19:08.814  INFO 6572 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-23 11:19:08.824  INFO 6572 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2023-07-23 11:19:08.987  INFO 6572 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-23 11:19:08.994  INFO 6572 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-23 11:19:09.358  INFO 6572 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 2000 (http) with context path ''
+2023-07-23 11:19:09.362  INFO 6572 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2023-07-23 11:19:09.362  INFO 6572 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@de63949]]
+2023-07-23 11:19:09.362  INFO 6572 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2023-07-23 11:19:09.369  INFO 6572 --- [main] com.base.websocket.WebsocketApplication  : Started WebsocketApplication in 2.628 seconds (JVM running for 2.954)
+2023-07-23 11:19:09.371  WARN 6572 --- [main] com.base.websocket.WakeUp                :  
+  ____                 __        __   _    ____                 _    _   
+ | __ )  __ _ ___  ___ \ \      / /__| |__/ ___|  ___   ___ ___| | _| |_ 
+ |  _ \ / _` / __|/ _ \ \ \ /\ / / _ \ '_ \___ \ / _ \ / __/ _ \ |/ / __|
+ | |_) | (_| \__ \  __/  \ V  V /  __/ |_) |__) | (_) | (_|  __/   <| |_ 
+ |____/ \__,_|___/\___|___\_/\_/ \___|_.__/____/ \___/ \___\___|_|\_\\__|
+                     |_____|                                              is ready
+2023-07-23 11:20:03.905  INFO 6572 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2023-07-23 11:20:03.906  INFO 6572 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@de63949]]
+2023-07-23 11:20:03.906  INFO 6572 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2023-07-23 11:20:03.925  INFO 6572 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-23 11:20:03.927  INFO 6572 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-23 11:20:03.938  INFO 6572 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-23 11:20:06.589  INFO 6597 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-07-23 11:20:06.590  INFO 6597 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=base_websocket, profiles=[local], label=null, version=null, state=null
+2023-07-23 11:20:06.590  WARN 6597 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location '[ConfigServerConfigDataResource@6f95cd51 uris = array<String>['http://newkayak.iptime.org:8888'], optional = false, profiles = list['local']]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: Config Server file:/home/config/base_websocket-local.yml:23:13]
+2023-07-23 11:20:06.777  INFO 6597 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-07-23 11:20:06.823  INFO 6597 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=base_websotcket, profiles=[default], label=null, version=null, state=null
+2023-07-23 11:20:06.824  INFO 6597 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}]
+2023-07-23 11:20:06.833  INFO 6597 --- [main] com.base.websocket.WebsocketApplication  : The following 1 profile is active: "local"
+2023-07-23 11:20:06.840  INFO 6597 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-07-23 11:20:06.841  INFO 6597 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=base_websotcket, profiles=[local], label=null, version=null, state=null
+2023-07-23 11:20:06.841  WARN 6597 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: Config Server file:/home/config/base_websocket-local.yml:23:13]
+2023-07-23 11:20:07.110  INFO 6597 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-23 11:20:07.120  INFO 6597 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2023-07-23 11:20:07.202  INFO 6597 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=343b947e-99ac-3741-84e2-997cf0f04bb2
+2023-07-23 11:20:07.388  INFO 6597 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 2000 (http)
+2023-07-23 11:20:07.393  INFO 6597 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-23 11:20:07.393  INFO 6597 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-07-23 11:20:07.462  INFO 6597 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-23 11:20:07.462  INFO 6597 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 621 ms
+2023-07-23 11:20:07.546  INFO 6597 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-23 11:20:07.568  INFO 6597 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-07-23 11:20:07.636  INFO 6597 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-07-23 11:20:07.678  INFO 6597 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-23 11:20:07.719  INFO 6597 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-23 11:20:07.728  INFO 6597 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2023-07-23 11:20:07.825  INFO 6597 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-23 11:20:07.831  INFO 6597 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-23 11:20:08.206  INFO 6597 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 2000 (http) with context path ''
+2023-07-23 11:20:08.209  INFO 6597 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2023-07-23 11:20:08.210  INFO 6597 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@62f7d7bd]]
+2023-07-23 11:20:08.210  INFO 6597 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2023-07-23 11:20:08.217  INFO 6597 --- [main] com.base.websocket.WebsocketApplication  : Started WebsocketApplication in 2.054 seconds (JVM running for 2.537)
+2023-07-23 11:20:08.218  WARN 6597 --- [main] com.base.websocket.WakeUp                :  
+  ____                 __        __   _    ____                 _    _   
+ | __ )  __ _ ___  ___ \ \      / /__| |__/ ___|  ___   ___ ___| | _| |_ 
+ |  _ \ / _` / __|/ _ \ \ \ /\ / / _ \ '_ \___ \ / _ \ / __/ _ \ |/ / __|
+ | |_) | (_| \__ \  __/  \ V  V /  __/ |_) |__) | (_) | (_|  __/   <| |_ 
+ |____/ \__,_|___/\___|___\_/\_/ \___|_.__/____/ \___/ \___\___|_|\_\\__|
+                     |_____|                                              is ready
+2023-07-23 11:20:12.603  INFO 6597 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2023-07-23 11:20:12.604  INFO 6597 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@62f7d7bd]]
+2023-07-23 11:20:12.604  INFO 6597 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2023-07-23 11:20:12.621  INFO 6597 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-23 11:20:12.623  INFO 6597 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-23 11:20:12.631  INFO 6597 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-23 11:20:15.025  INFO 6606 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-07-23 11:20:15.026  INFO 6606 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=base_websocket, profiles=[local], label=null, version=null, state=null
+2023-07-23 11:20:15.026  WARN 6606 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location '[ConfigServerConfigDataResource@6f95cd51 uris = array<String>['http://newkayak.iptime.org:8888'], optional = false, profiles = list['local']]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: Config Server file:/home/config/base_websocket-local.yml:23:13]
+2023-07-23 11:20:15.215  INFO 6606 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-07-23 11:20:15.255  INFO 6606 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=base_websotcket, profiles=[default], label=null, version=null, state=null
+2023-07-23 11:20:15.256  INFO 6606 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}]
+2023-07-23 11:20:15.265  INFO 6606 --- [main] com.base.websocket.WebsocketApplication  : The following 1 profile is active: "local"
+2023-07-23 11:20:15.273  INFO 6606 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-07-23 11:20:15.274  INFO 6606 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=base_websotcket, profiles=[local], label=null, version=null, state=null
+2023-07-23 11:20:15.274  WARN 6606 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: Config Server file:/home/config/base_websocket-local.yml:23:13]
+2023-07-23 11:20:15.521  INFO 6606 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-23 11:20:15.529  INFO 6606 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2023-07-23 11:20:15.606  INFO 6606 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=343b947e-99ac-3741-84e2-997cf0f04bb2
+2023-07-23 11:20:15.773  INFO 6606 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 2000 (http)
+2023-07-23 11:20:15.777  INFO 6606 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-23 11:20:15.778  INFO 6606 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-07-23 11:20:15.843  INFO 6606 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-23 11:20:15.843  INFO 6606 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 569 ms
+2023-07-23 11:20:15.924  INFO 6606 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-23 11:20:15.941  INFO 6606 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-07-23 11:20:15.998  INFO 6606 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-07-23 11:20:16.041  INFO 6606 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-23 11:20:16.080  INFO 6606 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-23 11:20:16.089  INFO 6606 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2023-07-23 11:20:16.575  INFO 6606 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-23 11:20:16.592  INFO 6606 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-23 11:20:16.956  INFO 6606 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 2000 (http) with context path ''
+2023-07-23 11:20:16.959  INFO 6606 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2023-07-23 11:20:16.959  INFO 6606 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@de63949]]
+2023-07-23 11:20:16.960  INFO 6606 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2023-07-23 11:20:16.966  INFO 6606 --- [main] com.base.websocket.WebsocketApplication  : Started WebsocketApplication in 2.372 seconds (JVM running for 2.756)
+2023-07-23 11:20:16.968  WARN 6606 --- [main] com.base.websocket.WakeUp                :  
+  ____                 __        __   _    ____                 _    _   
+ | __ )  __ _ ___  ___ \ \      / /__| |__/ ___|  ___   ___ ___| | _| |_ 
+ |  _ \ / _` / __|/ _ \ \ \ /\ / / _ \ '_ \___ \ / _ \ / __/ _ \ |/ / __|
+ | |_) | (_| \__ \  __/  \ V  V /  __/ |_) |__) | (_) | (_|  __/   <| |_ 
+ |____/ \__,_|___/\___|___\_/\_/ \___|_.__/____/ \___/ \___\___|_|\_\\__|
+                     |_____|                                              is ready
+2023-07-23 11:21:16.723  INFO 6606 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]

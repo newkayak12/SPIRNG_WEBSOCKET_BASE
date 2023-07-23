@@ -1,7 +1,15 @@
+buildscript {
+    ext {
+        queryDslVersion = "5.0.0"
+    }
+}
+
+
 plugins {
     id 'java'
-    id 'org.springframework.boot' version '2.7.14'
+    id 'org.springframework.boot' version '2.7.11'
     id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+    id "com.ewerk.gradle.plugins.querydsl" version "1.0.10"
 }
 
 group = 'com.base'
@@ -9,6 +17,12 @@ version = '0.0.1-SNAPSHOT'
 
 java {
     sourceCompatibility = '11'
+}
+
+
+
+ext {
+    set('springCloudVersion', "2021.0.7")
 }
 
 configurations {
@@ -19,6 +33,13 @@ configurations {
 
 repositories {
     mavenCentral()
+    mavenLocal()
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
 }
 
 dependencies {
@@ -26,8 +47,49 @@ dependencies {
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    //cloud config
+    implementation 'org.springframework.cloud:spring-cloud-starter'
+    implementation 'org.springframework.cloud:spring-cloud-starter-config'
+    implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap'
+
+
+    //Jpa
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    //Hibernate & QueryDSL
+    implementation 'com.querydsl:querydsl-core'
+    implementation 'org.mariadb.jdbc:mariadb-java-client'
+    implementation "com.querydsl:querydsl-jpa:${queryDslVersion}"
+    annotationProcessor "com.querydsl:querydsl-apt:${queryDslVersion}"
+
+    //ModelMapper
+    implementation 'org.modelmapper:modelmapper:3.1.1'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jdk8'
+
+    implementation 'com.github.newkayak12:Dependency-FileUpload:1.0.8'
 }
 
 tasks.named('test') {
     useJUnitPlatform()
 }
+
+
+
+// querydsl 세팅 시작
+def querydslDir = "$buildDir/generated/querydsl"
+querydsl {
+    jpa = true
+    querydslSourcesDir = querydslDir
+}
+sourceSets {
+    main.java.srcDir querydslDir
+}
+configurations {
+    querydsl.extendsFrom compileClasspath
+}
+compileQuerydsl {
+    options.annotationProcessorPath = configurations.querydsl
+}
+// querydsl 세팅 끝
