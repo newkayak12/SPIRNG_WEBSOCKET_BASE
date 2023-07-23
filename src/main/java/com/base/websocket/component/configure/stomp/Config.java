@@ -19,9 +19,9 @@ public class Config implements WebSocketMessageBrokerConfigurer {
     private StompOutbound afterHandler;
 
     @Autowired
-    public Config() {
-        preHandler = new StompInbound();
-        afterHandler = new StompOutbound();
+    public Config(StompInbound inbound, StompOutbound outbound) {
+        preHandler = inbound;
+        afterHandler = outbound;
         ConfigMsg.msg("STOMP");
     }
 
@@ -42,10 +42,10 @@ public class Config implements WebSocketMessageBrokerConfigurer {
         registration.interceptors(preHandler);
     }
 
-    @Override
-    public void configureClientOutboundChannel(ChannelRegistration registration) {
-        registration.interceptors(afterHandler);
-    }
+//    @Override
+//    public void configureClientOutboundChannel(ChannelRegistration registration) {
+//        registration.interceptors(afterHandler);
+//    }
 
 
 }

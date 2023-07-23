@@ -6,11 +6,14 @@
 </head>
 <script src="https://cdn.jsdelivr.net/npm/webstomp-client@1.2.6/dist/webstomp.min.js"></script>
 <script>
-    let websocket = new WebSocket("ws://localhost:8080/endpoint")
+    let websocket = new WebSocket("ws://localhost:2000/endpoint")
     let stomp = webstomp.over(websocket)
+    const userNo = (Math.random() * 100).toFixed(0)
+
+    console.log(userNo)
 
     function connect() {
-        stomp.connect({}, function (frame) {
+        stomp.connect({authorization: "test", userNo}, function (frame) {
             console.log(frame)
         })
     }
@@ -18,9 +21,13 @@
     function subscribe() {
         const channel = document.getElementById("channel").value
         console.log("CHANNEL", channel)
-        stomp.subscribe(`/topic/${channel}`, function (response) {
-            console.log(response)
-        })
+        stomp.subscribe(
+            `/topic/${channel}`,
+            function (response) {
+                 console.log(response)
+             },
+            {authorization: "test", userNo, roomNo: channel}
+            )
     }
 
     function message() {
@@ -30,7 +37,7 @@
         stomp.send(
             `/app/chat/${channel}`,
             msg,
-            {authorization: "test"}
+            {authorization: "test", userNo}
         )
     }
 </script>

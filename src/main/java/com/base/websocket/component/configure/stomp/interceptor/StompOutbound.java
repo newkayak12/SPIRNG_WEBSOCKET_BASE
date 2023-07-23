@@ -1,5 +1,7 @@
 package com.base.websocket.component.configure.stomp.interceptor;
 
+import com.base.websocket.component.configure.stomp.repository.StompRepository;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.MessageChannel;
@@ -10,7 +12,10 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Slf4j
+@RequiredArgsConstructor
 public class StompOutbound implements ChannelInterceptor {
+    private final StompRepository repository;
+
     @Override
     public Message<?> preSend(Message<?> message, MessageChannel channel) {
         StompHeaderAccessor accessor = StompHeaderAccessor.wrap(message);
@@ -18,7 +23,9 @@ public class StompOutbound implements ChannelInterceptor {
         String sessionId = accessor.getSessionId();
         String connectionType = accessor.getFirstNativeHeader("connectType");
         String authorization = accessor.getFirstNativeHeader("authorization");
+        String userNo = accessor.getFirstNativeHeader("userNo");
 
+//        if ( command.equals(StompCommand.DISCONNECT) ) repository.detachUser(sessionId);
 
         log.warn("OUTBOUND ::: preSend ::: {} /  {} / {} / {} ", command, sessionId, connectionType, authorization);
         return ChannelInterceptor.super.preSend(message, channel);
