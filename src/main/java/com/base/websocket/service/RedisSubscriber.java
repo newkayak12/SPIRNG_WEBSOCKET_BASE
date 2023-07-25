@@ -33,7 +33,7 @@ public class RedisSubscriber implements MessageListener {
             // WebSocket 구독자에게 채팅 메세지 Send
 
             messagingTemplate.convertAndSend(
-                    String.format("/topic/%s", container.getUuid()),
+                    String.format("/topic/%s", container.getRoomNo()),
                     container.getMsg(),
                     container.getHeaders()
             );

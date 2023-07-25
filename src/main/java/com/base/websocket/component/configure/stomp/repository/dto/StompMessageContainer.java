@@ -1,5 +1,6 @@
 package com.base.websocket.component.configure.stomp.repository.dto;
 
+import com.base.websocket.repository.dto.Bubble;
 import lombok.*;
 
 import java.util.Map;
@@ -8,9 +9,10 @@ import java.util.Map;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode
 @Builder
 public class StompMessageContainer {
-    private String uuid;
+    private String roomNo;
     private Map<String, Object> headers;
-    private String msg;
+    private Bubble msg;
 }
